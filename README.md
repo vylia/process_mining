@@ -4,4 +4,10 @@ This repository contains scripts I used during the RWTHx PM course.
 ## Contents
 
 - `PM.Rproj` — RStudio project
+
+### Lecture 1: Overview of the Process Mining Field and Basic Concepts
 - `recap11.R` — Recap 1.1 script
+- `recap11.Rmd` — R markedown file
+
+### Lecture 2.1: Process Discovery and Directly-Follows Graphs
+- `recap211.Rmd` — R markedown file 
