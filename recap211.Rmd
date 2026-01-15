@@ -1,0 +1,22 @@
+---
+title: "Recap 2.1.1: Directly-Follows Graph (DFG)"
+output: pdf_document
+---
+
+Consider the following event log. Extract the corresponding Directly-Follows Graph (DFG) and answer the questions.
+
+\includegraphics[scale=0.8]{dfg.png}
+
+##### 1. Which of the following statements are correct?
+
+- [ ] The DFG starts with Create Fine 4072 times.
+- [ ] The DFG ends with Payment 1835 times.
+- [X] Create Fine is the only start activity.
+- [X] There are three end activities, which are Payment, Send for Credit Collection, and Send Fine.
+- [ ] Send Fine is followed by Insert Fine Notification 2443 times.
+
+##### 2. Which of the following traces are allowed by the directly-follows graph?
+
+- [ ] Trace 1: Create Fine, Send Fine, Insert Fine Notification, Send for Credit Collection.
+- [X] Trace 2: Create Fine, Send Fine, Insert Fine Notification, Payment, Payment.
+- [X] Trace 3: Create Fine, Payment, Add Penalty, Send for Credit Collection.
