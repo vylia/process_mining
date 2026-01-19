@@ -1,0 +1,66 @@
+---
+title: "Recap 2.1.2: Process Discovery and Directly-Follows Graphs (DFG)"
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{tikz}
+  - \usetikzlibrary{positioning}
+---
+
+\noindent\textbf{1. Which of the following statements are correct?}
+
+- [ ] After applying arc-based filtering on a DFG, the frequencies of a node always match the add-up frequencies of the node’s outgoing arcs.
+- [X] There are three types of filtering techniques, which are activity-based, arc-based, variant-based filtering.
+- [ ] One cannot combine different kinds of filtering techniques for DFGs.
+- [X] Hidden activities might influence directly-follows frequency.
+- [X] DFGs cannot capture concurrency.
+
+\noindent\textbf{2. Consider the following event logs:}
+
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.6]{el.png}
+
+\vspace{0.5em}
+Draw a directly-follows graph for each of the event logs. Which of them shows the weakness of illustrating concurrency.
+
+- [ ] Event log 1
+- [X] Event log 2
+- [ ] Event log 3
+
+\begin{tikzpicture}[->, >=stealth, node distance=2.5cm, thick,
+    main node/.style={circle, draw, minimum size=1cm, font=\sffamily\large\bfseries}]
+  
+  % EL1
+  \node[main node] (a1) {a};
+  \node[main node] (b1) [below of=a1] {b};
+  \node[main node] (c1) [right of=b1, xshift=0.35cm] {c};
+  \node[main node] (d1) [below of=b1, yshift=-0.5cm] {d};
+  \path[every node/.style={font=\sffamily\small}]
+    (a1) edge node [left] {15} (b1) edge [bend left=30] node [right] {5} (c1)
+    (b1) edge node [above] {10} (c1) edge node [left] {5} (d1)
+    (c1) edge node [right] {15} (d1);
+
+  % EL2
+  \node[main node] (a2) [right=4.5cm of a1] {a};
+  \node[main node] (b2) [below of=a2] {b};
+  \node[main node] (c2) [right of=b2, xshift=0.5cm] {c};
+  \node[main node] (d2) [below of=b2, yshift=-0.5cm] {d};
+  \path[every node/.style={font=\sffamily\small}]
+    (a2) edge node [left] {10} (b2) edge [bend left=30] node [right] {10} (c2)
+    (b2) edge node [above] {10} (c2) edge node [left] {10} (d2)
+    (c2) edge [bend left=30] node [below] {10} (b2) edge node [right] {10} (d2);
+
+  % EL3
+  \node[main node] (a3) [right=5.5cm of a2] {a};
+  \node[main node] (b3) [below of=a3] {b};
+  \node[main node] (c3) [right of=b3, xshift=0.35cm] {c};
+  \node[main node] (d3) [below of=b3, yshift=-0.5cm] {d};
+  \path[every node/.style={font=\sffamily\small}]
+    (a3) edge node [left] {10} (b3) edge [bend left=30] node [right] {10} (c3)
+    (b3) edge [loop left] node {20} (b3) edge node [left] {10} (d3)
+    (c3) edge [loop right] node {10} (c3) edge node [right] {10} (d3);
+\end{tikzpicture}
+
+
+
