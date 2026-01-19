@@ -1,0 +1,35 @@
+---
+title: "Recap 2.2.1: Discover Sophisticated Process Models"
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{tikz}
+  - \usetikzlibrary{positioning}
+---
+
+\noindent\textbf{1. Consider the following Petri net model and select the correct statements.}
+
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.6]{figs/r221_pn1.png}
+
+\vspace{0.5em}
+
+- [X] The number of traces that are allowed by this model is infinite.
+- [ ] The trace $\langle a, b, c, d, e \rangle$ is allowed by the model.
+- [X] The trace $\langle a, c, d, c, b, d, c, e \rangle$ is allowed by the model.
+- [ ] The shortest trace that is allowed by this model has a length of 4.
+- [X] A complete trace always starts with activity a and ends with activity e .
+
+\noindent\textbf{2. Consider the following Petri net model and select the correct statements.}
+
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.6]{figs/r221_pn2.png}
+
+\vspace{0.5em}
+Draw a directly-follows graph for each of the event logs. Which of them shows the weakness of illustrating concurrency.
+
+- [ ] After executing a,b,c,d activities g, f, or e can occur.
+- [X] The trace $\langle a, c, f, c, g \rangle$ is allowed by the model.
+- [ ] The trace $\langle a, b, c, d, e, b, d, c, g \rangle$is allowed by the model.

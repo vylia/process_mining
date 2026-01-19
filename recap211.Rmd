@@ -5,7 +5,7 @@ output: pdf_document
 
 Consider the following event log. Extract the corresponding Directly-Follows Graph (DFG) and answer the questions.
 
-\includegraphics[scale=0.8]{dfg.png}
+\includegraphics[scale=0.8]{figs/r211_dfg.png}
 
 ##### 1. Which of the following statements are correct?
 

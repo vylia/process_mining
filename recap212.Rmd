@@ -19,7 +19,7 @@ header-includes:
 
 \vspace{0.5em}
 
-\noindent\includegraphics[scale=0.6]{el.png}
+\noindent\includegraphics[scale=0.6]{figs/r212_el.png}
 
 \vspace{0.5em}
 Draw a directly-follows graph for each of the event logs. Which of them shows the weakness of illustrating concurrency.
