@@ -1,0 +1,42 @@
+---
+title: "Recap 2.2.1: Discover Sophisticated Process Models"
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{tikz}
+  - \usetikzlibrary{positioning}
+---
+
+1. **Consider the following BPMN model, and select the Petri net that has the same behavior.**
+
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.4]{figs/r222_bpmn.png}
+
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.6]{figs/r222_bpmn_res.png}
+
+2. **Consider the following process tree. Which of the following statements are correct?.**
+
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.6]{figs/r222_pt.png}
+
+\vspace{0.5em}
+
+- [ ] The trace $\langle a, b, c, d, e\rangle$ is allowed by this model.
+- [X] Activities b and c can occur in any order.
+- [X] Activity d can occur several times in one trace.
+- [ ] A complete trace always starts with activity a and ends with activity e .
+- [X] The equivalent Petri net model is
+
+\noindent\includegraphics[scale=0.6]{figs/r222_pt_aux.png}
+
+3. **Consider the following event log and the corresponding directly-follows graph.**
+
+\noindent\includegraphics[scale=0.6]{figs/r222_eldfg.png}
+
+Which of the following models is discovered by the inductive miner algorithm?
+
+\noindent\includegraphics[scale=0.6]{figs/r222_eldfg_res.png}

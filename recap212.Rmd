@@ -7,7 +7,7 @@ header-includes:
   - \usetikzlibrary{positioning}
 ---
 
-\noindent\textbf{1. Which of the following statements are correct?}
+1. **Which of the following statements are correct?**
 
 - [ ] After applying arc-based filtering on a DFG, the frequencies of a node always match the add-up frequencies of the node’s outgoing arcs.
 - [X] There are three types of filtering techniques, which are activity-based, arc-based, variant-based filtering.
@@ -15,7 +15,7 @@ header-includes:
 - [X] Hidden activities might influence directly-follows frequency.
 - [X] DFGs cannot capture concurrency.
 
-\noindent\textbf{2. Consider the following event logs:}
+2. **Consider the following event logs:**
 
 \vspace{0.5em}
 
@@ -61,6 +61,5 @@ Draw a directly-follows graph for each of the event logs. Which of them shows th
     (b3) edge [loop left] node {20} (b3) edge node [left] {10} (d3)
     (c3) edge [loop right] node {10} (c3) edge node [right] {10} (d3);
 \end{tikzpicture}
-
 
 
