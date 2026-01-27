@@ -18,3 +18,6 @@ This repository contains scripts I used during the RWTHx PM course.
 - `recap221.Rmd` — R markdown file 
 - `recap222.Rmd` — R markdown file 
 - Intructions and data for this week's tutorial
+
+### Lecture 3.1: Introduction to Conformance Checking
+- `recap311.Rmd` — R markdown file 
