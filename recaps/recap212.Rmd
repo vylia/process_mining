@@ -5,6 +5,7 @@ header-includes:
   - \usepackage{float}
   - \usepackage{tikz}
   - \usetikzlibrary{positioning}
+geometry: margin=1cm
 ---
 
 1. **Which of the following statements are correct?**

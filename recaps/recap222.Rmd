@@ -5,6 +5,7 @@ header-includes:
   - \usepackage{float}
   - \usepackage{tikz}
   - \usetikzlibrary{positioning}
+geometry: margin=2cm
 ---
 
 1. **Consider the following BPMN model, and select the Petri net that has the same behavior.**

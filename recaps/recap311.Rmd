@@ -1,0 +1,48 @@
+---
+title: "Recap 3.1.1: Introduction to Conformance Checking"
+output: pdf_document
+header-includes:
+  - \usepackage{float}
+  - \usepackage{tikz}
+  - \usetikzlibrary{positioning}
+geometry: margin=2.5cm
+---
+  
+1. **Consider the following BPMN model and event log. How many cases are conforming to the model?.**
+  
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.25]{figs/r311_bpmn_el.png}
+
+\vspace{0.5em}
+\textbf{Cases: 23}
+
+The BPMN model starts with activity (a) followed by an AND (+). It means the process must complete both tasks ((b) or XOR(c, skip)) and then can execute (d). So, the variants showed:
+
+1. $\langle a, b, c, d\rangle \rightarrow$ Both branches are complete, conforming. (10)
+2. $\langle a, c, d\rangle \rightarrow$ (b) is missing, not conforming.
+3. $\langle a, c, b, d\rangle \rightarrow$ Both branches are complete, conforming. (10)
+4. $\langle a, b, c, b, d\rangle \rightarrow$ (b) cannot be repeated, not conforming.
+5. $\langle a, b, d\rangle \rightarrow$ Both branches are complete, conforming. (3)
+6. $\langle a, b, b, b, d\rangle \rightarrow$ (b) cannot be repeated, not conforming.
+7. $\langle a, c, c, d\rangle \rightarrow$ (b) is missing and (c) cannot be repeated, not conforming.
+
+
+2. **Consider the following Petri net model and event log. How many cases are conforming to the model?**
+  
+\vspace{0.5em}
+
+\noindent\includegraphics[scale=0.3]{figs/r311_petri_el.png}
+
+\vspace{0.5em}
+\textbf{Cases: 20}
+
+The Petri model starts with a token that allows (a). When (a) happens, it consumes the token from the start and produces two tokens: one at the top, one at the bottom. For the top path, a choice appears between (c) or a XOR (black filled square); whichever happens generates a token (but the XOR requires two tokens to occur). For the bottom path, a choice appears between (b) or a XOR (black filled square); whichever happens generates a token (but the XOR requires two tokens to occur). (d) occurs once there are two tokens available, one from the top path, one from the bottom path.
+
+1. $\langle a, b, c, d\rangle \rightarrow$ Both (b) and (c) are complete, conforming. (10)
+2. $\langle a, c, d\rangle \rightarrow$ (b) is missing, not conforming.
+3. $\langle a, c, b, d\rangle \rightarrow$ Both branches are complete, conforming. (10)
+4. $\langle a, b, c, b, d\rangle \rightarrow$ (b) cannot be repeated, not conforming.
+5. $\langle a, b, d\rangle \rightarrow$ (c) is missing and the skip cannot occur, not conforming.
+6. $\langle a, b, b, b, d\rangle \rightarrow$ (b) cannot be repeated, not conforming.
+7. $\langle a, c, c, d\rangle \rightarrow$ (c) cannot be repeated, not conforming.
